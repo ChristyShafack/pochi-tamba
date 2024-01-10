@@ -1,2 +1,1 @@
 # pochi-tamba
-portfolio website

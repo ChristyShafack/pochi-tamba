@@ -1,0 +1,17 @@
+$color-dark: #11043f;
+$color-white: #fefcf4;
+$color-accent: #4b0081;
+$color-black: #1d1d1d;
+
+$font-polysans-neutral: 'Polysans Neutral', sans-serif;
+$font-polysans-slim: 'Polysans Slim', sans-serif;
+
+$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+
+$z-indexes: (
+  'noscript',
+  'preloader',
+  'navigation',
+  'content',
+  'canvas',
+);

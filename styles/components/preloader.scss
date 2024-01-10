@@ -1,0 +1,29 @@
+.preloader {
+  @extend %cover;
+  @extend %center;
+
+  background: $color-white;
+  color:$color-dark;
+  overflow: hidden;
+  position: fixed;
+  transform-origin: 0 0;
+  z-index: z('preloader');
+
+  &--loaded {
+    transform: scaleY(0);
+  }
+}
+
+.preloader__text {
+  @extend %text-polysans-slim-50;
+  font-weight: 200;
+  opacity: 0;
+  span span {
+    display: inline-block;
+    transform-origin: center center 0.5em;
+    word-spacing: 0.8rem;
+  }
+  @include media('<=phone') {
+    font-size: 2.5rem;
+  }
+}
