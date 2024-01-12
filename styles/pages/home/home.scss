@@ -18,38 +18,40 @@
   padding-bottom: 100px;
 }
 
-.intro {
+.intro__one,
+.intro__two {
   width: 100%;
   text-align: left;
 }
 
-.intro__content{
+.intro__one__content,
+.intro__two__content {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 150px 0 100px 0;
+  padding: 100px 0 100px 0;
 }
 
 .title,
-.quote{
-  p{
+.quote {
+  h2,
+  p {
     font-family: $font-polysans-slim;
     font-size: 3rem;
   }
-
 }
 
-.name__content{
+.name__content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-.name{
+.name {
   font-family: $font-polysans-neutral;
   font-size: 35rem;
   line-height: 0.8;
@@ -57,8 +59,65 @@
 }
 
 .image {
-    width: 70%;
-    object-fit: cover;
-    margin: 0 auto;
-    z-index: -1;
+  width: 70%;
+  object-fit: cover;
+  margin: 0 auto;
+  z-index: -1;
+}
+
+.writeup {
+  margin: 0 auto;
+  p {
+    margin-top: 100px;
+    font-size: 5rem;
+    font-weight: 100;
+    text-align: center;
+  }
+}
+
+.cta {
+  .btn {
+    @extend %cta;
+  }
+}
+
+.intro__two {
+  background-color: $color-black;
+  color: $color-white;
+}
+
+.intro__two__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.intro__two__title {
+  h2 {
+    font-family: $font-polysans-slim;
+    font-size: 3rem;
+  }
+}
+
+.intro__two__projects {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.intro__two__project {
+  display: flex;
+  flex-direction: column;
+  a {
+    font-size: 4rem;
+    @extend %link__white;
+  }
+}
+
+.intro__two__project__img {
+  width: 400px;
+  object-fit: cover;
+
 }
