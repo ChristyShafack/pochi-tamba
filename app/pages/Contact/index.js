@@ -4,11 +4,11 @@ export default class extends Page {
   constructor () {
     super({
       classes: {
-        active: 'contact--active',
+        active: 'contact--active'
       },
       element: '.contact',
       elements: {
-        wrapper: '.contact__content',
+        wrapper: '.contact__content'
       }
     })
   }

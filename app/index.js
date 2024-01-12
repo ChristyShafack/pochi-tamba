@@ -27,7 +27,7 @@ class App {
     this.content = document.querySelector('.content')
     this.template = this.content.dataset.template
 
-    this.createPreloader()
+    // this.createPreloader()
     this.createCanvas()
 
     this.pages = new Map()
@@ -65,7 +65,7 @@ class App {
 
       window.dataLayer = window.dataLayer || [];
 
-      gtag('js', new Date)
+      gtag('js', new Date())
       gtag('config', 'GOOGLE_ANALYTICS')
     }
 

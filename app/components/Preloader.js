@@ -80,7 +80,7 @@ export default class Preloader extends Component {
       this.emit('completed')
 
       this.animateOut = GSAP.timeline({
-        delay: 1
+        delay: 8
       })
 
       each(this.elements.titleSpans, (line, index) => {

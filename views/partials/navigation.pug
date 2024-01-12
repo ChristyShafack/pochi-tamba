@@ -1,3 +1,22 @@
-nav.navigation
-  a.navigation__link(href="/") Home
-  a.navigation__link(href="/about") About
+nav.navbar
+  .container
+    .navbar-logo
+      a(href='index.html')
+        i.ph-fill.ph-circle-half
+        |  Pochi Tamba
+    .navbar-items
+      input#hamburger-toggle(type='checkbox')
+      label.hamburger-icon(for='hamburger-toggle')
+        i.ph-light.ph-list
+      ul.navbar-links
+        li.navbar-item
+          a(href='/home') Home
+        li.navbar-item
+          a(href='/projects') Projects
+        li.navbar-item
+          a(href='/about') About
+        li.navbar-item
+          a(href='/blog') Blog
+        li.navbar-item
+          a(href='/contact') Contact
+

@@ -30,6 +30,18 @@ app.listen(app.get('PORT'), () => {})
 app.get('/', (request, response) => {
   response.render('pages/home')
 })
+app.get('/', (request, response) => {
+  response.render('pages/projects')
+})
+app.get('/', (request, response) => {
+  response.render('pages/blog')
+})
+app.get('/', (request, response) => {
+  response.render('pages/about')
+})
+app.get('/', (request, response) => {
+  response.render('pages/contat')
+})
 
 app.use((request, response) => {
   response.status(404)

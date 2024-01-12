@@ -6,7 +6,7 @@
 }
 
 %link__line {
-  background: currentColor;
+  background: $color-accent;
   bottom: 0;
   content: '';
   height: 1px;
@@ -30,7 +30,7 @@
   @extend %link__wrapper;
 
   display: inline-block;
-  line-height: 1.05;
+  line-height: 0.5;
 
   &:after {
     @extend %link__line;
@@ -58,6 +58,7 @@
 
   &:hover,
   &:focus {
+    color: $color-accent;
     &:after {
       @extend %link__line--visible;
     }

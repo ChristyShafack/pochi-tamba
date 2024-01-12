@@ -1,7 +1,5 @@
 .home {
   @extend %page;
-
-  font-size: 100rem;
   word-break: break-all;
 
   &--active {
@@ -10,5 +8,57 @@
 }
 
 .home__content {
+  @extend %cover;
   @extend %content;
+  overflow: auto;
+  // color:$color-black;
+}
+
+.page-content {
+  padding-bottom: 100px;
+}
+
+.intro {
+  width: 100%;
+  text-align: left;
+}
+
+.intro__content{
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 150px 0 100px 0;
+}
+
+.title,
+.quote{
+  p{
+    font-family: $font-polysans-slim;
+    font-size: 3rem;
+  }
+
+}
+
+.name__content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name{
+  font-family: $font-polysans-neutral;
+  font-size: 35rem;
+  line-height: 0.8;
+  color: $color-accent;
+}
+
+.image {
+    width: 70%;
+    object-fit: cover;
+    margin: 0 auto;
+    z-index: -1;
 }
