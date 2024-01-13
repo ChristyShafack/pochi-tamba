@@ -32,7 +32,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 100px 0 100px 0;
+  padding: 150px 0 100px 0;
 }
 
 .title,
@@ -100,24 +100,36 @@
 }
 
 .intro__two__projects {
-  margin-top: 100px;
+  margin-top: 80px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-content: space-between;
 }
 
 .intro__two__project {
   display: flex;
   flex-direction: column;
-  a {
-    font-size: 4rem;
-    @extend %link__white;
+  margin-bottom: 100px;
+  .intro__two__project__img {
+    width: 400px;
+    object-fit: cover;
   }
-}
 
-.intro__two__project__img {
-  width: 400px;
-  object-fit: cover;
+  .intro__two__project__title {
+    margin-top: 5px;
+    h2 {
+      font-family: $font-polysans-neutral;
+      font-size: 6rem;
+    }
+  }
 
+  .intro__two__project__cta {
+    a {
+      font-family: $font-polysans-slim;
+      font-size: 3rem;
+      @extend %link__white;
+    }
+  }
 }

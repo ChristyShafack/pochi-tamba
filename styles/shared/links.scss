@@ -20,11 +20,11 @@
   background: $color-white;
   bottom: 0;
   content: '';
-  height: 3px;
+  height: 1.5px;
   left: 0;
   position: absolute;
   transition: transform 0.7s $ease-out-expo;
-  width: 50%;
+  width: 100%;
 }
 
 %link__line--visible {
