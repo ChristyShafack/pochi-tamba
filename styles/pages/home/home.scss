@@ -18,14 +18,24 @@
   padding-bottom: 100px;
 }
 
-.intro__one,
-.intro__two {
+.intro,
+.work,
+.reviews,
+.connect,
+.footer {
   width: 100%;
   text-align: left;
 }
 
-.intro__one__content,
-.intro__two__content {
+.connect {
+  background-color: $color-accent;
+}
+
+.intro__content,
+.intro__work__content,
+.intro__reviews__content,
+.intro__connect,
+.footer__content {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
@@ -77,30 +87,32 @@
 
 .cta {
   .btn {
-    @extend %cta;
+    @extend %cta--colored;
   }
 }
 
-.intro__two {
+.intro__work {
   background-color: $color-black;
   color: $color-white;
 }
 
-.intro__two__content {
+.intro__work__content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.intro__two__title {
+.intro__work__title,
+.intro__reviews__title,
+.intro__connect__title {
   h2 {
     font-family: $font-polysans-slim;
     font-size: 3rem;
   }
 }
 
-.intro__two__projects {
-  margin-top: 80px;
+.intro__work__projects{
+  margin-top: 100px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -108,16 +120,16 @@
   align-content: space-between;
 }
 
-.intro__two__project {
+.intro__work__project {
   display: flex;
   flex-direction: column;
   margin-bottom: 100px;
-  .intro__two__project__img {
+  .intro__work__project__img {
     width: 400px;
     object-fit: cover;
   }
 
-  .intro__two__project__title {
+  .intro__work__project__title {
     margin-top: 5px;
     h2 {
       font-family: $font-polysans-neutral;
@@ -125,11 +137,104 @@
     }
   }
 
-  .intro__two__project__cta {
+  .intro__work__project__cta {
     a {
       font-family: $font-polysans-slim;
       font-size: 3rem;
-      @extend %link__white;
+      @extend %link--white;
     }
   }
+}
+
+.intro__reviews{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+.intro__review{ 
+display: flex;
+flex-direction: row;
+align-content: flex-start;
+justify-content: space-between;
+margin-bottom: 50px;
+}
+
+.intro__review__client{
+width: 100px;
+object-fit: cover;
+}
+
+.intro__reviews__client__name{
+font-family: $font-polysans-neutral;
+font-size: 4rem;
+}
+
+.intro__review__text{
+  line-height: 1.5;
+  font-size: 2.5rem;
+}
+
+.intro__connect 
+
+.intro__connect__content{
+  background-color: $color-accent;
+  color: $color-white;
+}
+
+.intro__connect__title {
+  h2 {
+    color: $color-white;
+  }
+}
+
+.intro__connect__cta {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  p{
+    margin-top: 50px;
+    font-size: 5rem;
+    font-weight: 100;
+    text-align: center;
+    color: $color-white;
+  }
+  .btn{
+    @extend %cta--white;
+  }
+}
+
+.footer__navigation,
+.footer__socials,
+.footer__copyright {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.footer__navigation {
+  font-size: 3rem;
+}
+
+.footer__socials{
+  font-family: $font-polysans-neutral;
+  font-size: 2.8rem;
+  color: $color-accent;
+  a{
+    @extend %link--colored;
+  }
+}
+
+.footer__brand {
+  font-size: 15rem;
+  font-family: $font-polysans-neutral;
+  color: $color-accent;
+  text-align: center;
+  margin-bottom: 150px;
+}
+
+.footer__copyright {
+  font-size: 2rem;
 }

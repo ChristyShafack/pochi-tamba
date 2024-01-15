@@ -1,3 +1,38 @@
+mixin footer
+  section.footer
+    .footer__content
+      .footer__navigation
+        p
+          a(href='#') Home
+        p
+          a(href='#') Projects
+        p
+          a(href='#') Blog
+        p
+          a(href='#') About
+        p
+          a(href='#') Contact
+      .footer__socials 
+        p
+          a(href='#') Facebook
+        p
+          a(href='#') Twitter
+        p
+          a(href='#') LinkedIn
+        p
+          a(href='#') Instagram
+
+      .footer__brand
+        p
+          a(href='/home') Pochi Tamba
+
+      .footer__copyright
+          p
+            a(href='#') Terms
+          p
+            a(href='#') Privacy
+          p pochi-tamba ©2024
+
 block variables
 
 doctype html
@@ -42,14 +77,12 @@ if !isAJAX
 
     body
       //- include ./partials/preloader
-      //- include ./partials/footer
       //- include ./partials/cursor
       include ./partials/navigation
-
       .content#content(data-template=template)
         block body
-
       include ./partials/noscript
+       
 
       script(async src=getVersionedPath('/main.js'))
 else
