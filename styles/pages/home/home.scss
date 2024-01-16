@@ -11,11 +11,6 @@
   @extend %cover;
   @extend %content;
   overflow: auto;
-  // color:$color-black;
-}
-
-.page-content {
-  padding-bottom: 100px;
 }
 
 .intro,
@@ -23,8 +18,7 @@
 .reviews,
 .connect,
 .footer {
-  width: 100%;
-  text-align: left;
+  @extend %sections;
 }
 
 .connect {
@@ -36,17 +30,12 @@
 .intro__reviews__content,
 .intro__connect,
 .footer__content {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 150px 0 100px 0;
+  @extend %section__contents;
 }
 
 .title,
 .quote {
+
   h2,
   p {
     font-family: $font-polysans-slim;
@@ -62,21 +51,16 @@
 }
 
 .name {
-  font-family: $font-polysans-neutral;
-  font-size: 35rem;
-  line-height: 0.8;
-  color: $color-accent;
+  @extend %page-headings;
 }
 
-.image {
-  width: 70%;
-  object-fit: cover;
-  margin: 0 auto;
-  z-index: -1;
+.image{
+@extend %heading__img;
 }
 
 .writeup {
   margin: 0 auto;
+
   p {
     margin-top: 100px;
     font-size: 5rem;
@@ -111,7 +95,7 @@
   }
 }
 
-.intro__work__projects{
+.intro__work__projects {
   margin-top: 100px;
   display: flex;
   flex-direction: row;
@@ -124,6 +108,7 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 100px;
+
   .intro__work__project__img {
     width: 400px;
     object-fit: cover;
@@ -131,6 +116,7 @@
 
   .intro__work__project__title {
     margin-top: 5px;
+
     h2 {
       font-family: $font-polysans-neutral;
       font-size: 6rem;
@@ -146,39 +132,37 @@
   }
 }
 
-.intro__reviews{
+.intro__reviews {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   margin-top: 100px;
 }
 
-.intro__review{ 
-display: flex;
-flex-direction: row;
-align-content: flex-start;
-justify-content: space-between;
-margin-bottom: 50px;
+.intro__review {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  justify-content: space-between;
+  margin-bottom: 50px;
 }
 
-.intro__review__client{
-width: 100px;
-object-fit: cover;
+.intro__review__client {
+  width: 100px;
+  object-fit: cover;
 }
 
-.intro__reviews__client__name{
-font-family: $font-polysans-neutral;
-font-size: 4rem;
+.intro__reviews__client__name {
+  font-family: $font-polysans-neutral;
+  font-size: 4rem;
 }
 
-.intro__review__text{
+.intro__review__text {
   line-height: 1.5;
   font-size: 2.5rem;
 }
 
-.intro__connect 
-
-.intro__connect__content{
+.intro__connect .intro__connect__content {
   background-color: $color-accent;
   color: $color-white;
 }
@@ -193,48 +177,61 @@ font-size: 4rem;
   display: flex;
   flex-direction: column;
   text-align: center;
-  p{
+
+  p {
     margin-top: 50px;
     font-size: 5rem;
     font-weight: 100;
     text-align: center;
     color: $color-white;
   }
-  .btn{
+
+  .btn {
     @extend %cta--white;
   }
+}
+
+.footer {
+  position: fixed;
+}
+
+.footer__content {
+  padding: 150px 0 0 0;
 }
 
 .footer__navigation,
 .footer__socials,
 .footer__copyright {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 
 .footer__navigation {
   font-size: 3rem;
 }
 
-.footer__socials{
+.footer__socials {
   font-family: $font-polysans-neutral;
   font-size: 2.8rem;
   color: $color-accent;
-  a{
+
+  a {
     @extend %link--colored;
   }
 }
 
 .footer__brand {
-  font-size: 15rem;
+  font-size: 20rem;
+  font-weight: 500;
   font-family: $font-polysans-neutral;
+  letter-spacing: -7px;
   color: $color-accent;
   text-align: center;
-  margin-bottom: 150px;
+  margin-bottom: 80px;
 }
 
 .footer__copyright {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }

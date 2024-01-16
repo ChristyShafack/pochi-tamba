@@ -26,3 +26,26 @@
   width: 100%;
   will-change: transform;
 }
+
+%heading__img{
+  width: 70%;
+  object-fit: cover;
+  margin: 0 auto;
+  z-index: -1;
+}
+
+%sections{
+  width: 100%;
+  text-align: left;
+}
+
+%section__contents{
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 150px 0 100px 0;
+}
+

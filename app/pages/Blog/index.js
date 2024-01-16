@@ -4,11 +4,11 @@ export default class extends Page {
   constructor () {
     super({
       classes: {
-        active: 'projects--active'
+        active: 'blog--active'
       },
-      element: '.projects',
+      element: '.blog',
       elements: {
-        wrapper: '.projects__content'
+        wrapper: '.blog__content'
       }
     })
   }

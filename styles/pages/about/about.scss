@@ -1,14 +1,5 @@
 .about {
-
-}
-
-.about__content {
-
-}
-.about {
   @extend %page;
-
-  font-size: 100rem;
   word-break: break-all;
 
   &--active {
@@ -17,5 +8,74 @@
 }
 
 .about__content {
+  @extend %cover;
   @extend %content;
+  @extend %content;
+  overflow: auto;
+}
+
+.intro__about {
+  @extend %sections;
+}
+
+.intro__about__content {
+  @extend %section__contents;
+
+  h1 {
+    @extend %page-headings;
+    line-height: 0.8;
+  }
+  img{
+    @extend %heading__img;
+  }
+}
+
+.about__content__details {
+  background-color: chartreuse;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about__me,
+.about__background{
+  margin-bottom: 100px;
+}
+
+
+.about__me {
+  background-color: brown;
+  h2 {
+    font-family: $font-polysans-slim;
+    font-size: 4rem;
+    color: $color-accent;
+  }
+
+  p {
+    font-family: $font-polysans-neutral;
+    font-size: 3rem;
+    color: $color-black;
+  }
+}
+
+.about__background {
+  background-color: aquamarine;
+  h2 {
+    font-family: $font-polysans-slim;
+    font-size: 4rem;
+    color: $color-accent;
+  }
+
+  .details{
+    display: flex;
+    flex-direction: column;
+    background-color: yellow;
+  }
+
+  p {
+    font-family: $font-polysans-neutral;
+    font-size: 3rem;
+    color: $color-black;
+    margin-bottom: 50px;
+  }
 }

@@ -1,14 +1,11 @@
-import Page from 'components/Page'
+import Component from 'classes/Component'
 
-export default class extends Page {
+export default class extends Component {
   constructor () {
     super({
-      classes: {
-        active: 'projects--active'
-      },
-      element: '.projects',
+      classes: {},
+      element: '.navigation',
       elements: {
-        wrapper: '.projects__content'
       }
     })
   }
@@ -18,7 +15,6 @@ export default class extends Page {
    */
   async show (url) {
     this.element.classList.add(this.classes.active)
-
     return super.show(url)
   }
 

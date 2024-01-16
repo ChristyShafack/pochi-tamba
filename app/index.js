@@ -10,10 +10,13 @@ import each from 'lodash/each'
 
 import Detection from 'classes/Detection'
 
+import Contact from 'pages/Contact'
 import About from 'pages/About'
+import Blog from 'pages/Blog'
+import Projects from 'pages/Projects'
 import Home from 'pages/Home'
 
-import Canvas from 'components/Canvas'
+// import Navigation from 'components/Navigation'
 import Preloader from 'components/Preloader'
 
 class App {
@@ -28,10 +31,12 @@ class App {
     this.template = this.content.dataset.template
 
     // this.createPreloader()
-    this.createCanvas()
-
+    // this.createNavigation()
     this.pages = new Map()
+    this.pages.set('contact', new Contact())
     this.pages.set('about', new About())
+    this.pages.set('blog', new Blog())
+    this.pages.set('projects', new Projects())
     this.pages.set('home', new Home())
 
     this.page = this.pages.get(this.template)
@@ -63,7 +68,7 @@ class App {
         dataLayer.push(arguments)
       }
 
-      window.dataLayer = window.dataLayer || [];
+      window.dataLayer = window.dataLayer || []
 
       gtag('js', new Date())
       gtag('config', 'GOOGLE_ANALYTICS')
@@ -72,12 +77,6 @@ class App {
     googleAnalytics.src = 'https://www.googletagmanager.com/gtag/js?id=GOOGLE_ANALYTICS'
 
     document.body.appendChild(googleAnalytics)
-  }
-
-  createCanvas () {
-    this.canvas = new Canvas({
-      url: this.url
-    })
   }
 
   createStats () {
@@ -163,10 +162,6 @@ class App {
       this.page.update()
     }
 
-    if (this.canvas) {
-      this.canvas.update(this)
-    }
-
     if (this.stats) {
       this.stats.end()
     }
@@ -196,10 +191,6 @@ class App {
       if (this.page) {
         this.page.onResize()
       }
-
-      if (this.canvas) {
-        this.canvas.onResize()
-      }
     })
   }
 
@@ -224,10 +215,6 @@ class App {
 
     if (!Detection.isMobile() && event.target.tagName === 'A') return
 
-    if (this.canvas && this.canvas.onTouchDown) {
-      this.canvas.onTouchDown(event)
-    }
-
     if (this.page && this.page.onTouchDown) {
       this.page.onTouchDown(event)
     }
@@ -235,11 +222,6 @@ class App {
 
   onTouchMove (event) {
     event.stopPropagation()
-
-    if (this.canvas && this.canvas.onTouchMove) {
-      this.canvas.onTouchMove(event)
-    }
-
     if (this.page && this.page.onTouchDown) {
       this.page.onTouchMove(event)
     }
@@ -247,10 +229,6 @@ class App {
 
   onTouchUp (event) {
     event.stopPropagation()
-
-    if (this.canvas && this.canvas.onTouchUp) {
-      this.canvas.onTouchUp(event)
-    }
 
     if (this.page && this.page.onTouchDown) {
       this.page.onTouchUp(event)
@@ -314,7 +292,7 @@ class App {
   }
 }
 
-const fontNeueHaas = new FontFaceObserver('Neue Haas Grotesk Regular')
+const fontNeueHaas = new FontFaceObserver('Polysans Neutral')
 
 Promise.all([
   fontNeueHaas.load()
@@ -324,4 +302,4 @@ Promise.all([
   window.APP = new App()
 })
 
-console.log('%c Developed by Bizarro - https://bizar.ro/', 'background: #000; color: #fff;')
+console.log('%c Developed by Christy - https://christyshafack.com/', 'background: #000; color: #fff;')

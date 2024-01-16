@@ -1,9 +1,17 @@
 %text-polysans-neutral-150 {
-    font-family: $font-polysans-neutral;
-    font-size: 15rem;
-  }
+  font-family: $font-polysans-neutral;
+  font-size: 15rem;
+}
 
-  %text-polysans-slim-50 {
-    font-family: $font-polysans-slim;
-    font-size: 5rem;
-  }
+%text-polysans-slim-50 {
+  font-family: $font-polysans-slim;
+  font-size: 5rem;
+}
+
+%page-headings{
+  font-family: $font-polysans-neutral;
+  font-size: 35rem;
+  line-height: 0.8;
+  color: $color-accent;
+  letter-spacing: -8px;
+}
