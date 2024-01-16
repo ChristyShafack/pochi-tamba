@@ -31,20 +31,19 @@
 }
 
 .about__content__details {
-  background-color: chartreuse;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin: 50px 0 0 0;
 }
 
 .about__me,
 .about__background{
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 }
 
 
 .about__me {
-  background-color: brown;
   h2 {
     font-family: $font-polysans-slim;
     font-size: 4rem;
@@ -55,27 +54,23 @@
     font-family: $font-polysans-neutral;
     font-size: 3rem;
     color: $color-black;
+     margin: 30px 0 0 0;
   }
 }
 
 .about__background {
-  background-color: aquamarine;
+
   h2 {
     font-family: $font-polysans-slim;
     font-size: 4rem;
     color: $color-accent;
   }
 
-  .details{
-    display: flex;
-    flex-direction: column;
-    background-color: yellow;
-  }
 
   p {
     font-family: $font-polysans-neutral;
     font-size: 3rem;
     color: $color-black;
-    margin-bottom: 50px;
+    margin: 30px 0 0 0;
   }
 }
