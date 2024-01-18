@@ -1,0 +1,28 @@
+extends ../base.pug
+
+block variables
+    - var template = 'contact'
+
+block body
+    .contact
+        .contact__content
+            section.intro__contact
+                .intro__contact__content
+                    h1 Contact
+                    .contact__content__options
+                        h2 Want to 
+                            span collaborate 
+                            br
+                            |  with me Or just say hi?
+                        .contact__option__email
+                            a(href='mailto:christyshafack@gmail.com' target='gmail.com') christyshafack@gmail.com
+                        .contact__option__socials
+                            a(href='#') Facebook
+                            a(href='#') Twitter
+                            a(href='#') LinkedIn
+                        .contact__option__form
+            +footer 
+    
+
+
+

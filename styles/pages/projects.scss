@@ -1,0 +1,52 @@
+.projects {
+    @extend %page;
+    word-break: break-all;
+
+    &--active {
+        @extend %page--active;
+    }
+}
+
+.projects__content {
+    @extend %cover;
+    @extend %content;
+    overflow: auto;
+}
+
+.intro__projects {
+    @extend %sections;
+}
+
+.intro__projects__content {
+    @extend %section__contents;
+
+    h1 {
+        @extend %page-headings;
+    }
+}
+
+.projects__list__content {
+    @extend %section__contents;
+}
+
+.projects__list {
+    @extend %projects;
+    margin-top: 80px;
+}
+
+.project {
+    @extend %project;
+}
+
+.project__img {
+    @extend %project__img;
+
+}
+
+.project__title {
+    @extend %project__title;
+}
+
+.project__cta {
+    @extend %project__project__cta;
+}

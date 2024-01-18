@@ -28,8 +28,7 @@
 .intro__content,
 .intro__work__content,
 .intro__reviews__content,
-.intro__connect,
-.footer__content {
+.intro__connect{
   @extend %section__contents;
 }
 
@@ -96,39 +95,22 @@
 }
 
 .intro__work__projects {
-  margin-top: 100px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: space-between;
+  @extend %projects;
 }
 
 .intro__work__project {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 100px;
+@extend %project;
 
   .intro__work__project__img {
-    width: 400px;
-    object-fit: cover;
+@extend %project__img;
   }
 
   .intro__work__project__title {
-    margin-top: 5px;
-
-    h2 {
-      font-family: $font-polysans-neutral;
-      font-size: 6rem;
-    }
+   @extend %project__title;
   }
 
   .intro__work__project__cta {
-    a {
-      font-family: $font-polysans-slim;
-      font-size: 3rem;
-      @extend %link--white;
-    }
+ @extend %project__cta;
   }
 }
 
@@ -193,45 +175,53 @@
 
 .footer {
   position: fixed;
+  background-color: rgb(255, 255, 255);
 }
 
 .footer__content {
-  padding: 150px 0 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 100px 0;
 }
 
 .footer__navigation,
 .footer__socials,
 .footer__copyright {
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
-  margin-bottom: 60px;
+  text-align: left;
 }
 
 .footer__navigation {
   font-size: 3rem;
+  a {
+    @extend %link--colored;
+  }
 }
 
 .footer__socials {
   font-family: $font-polysans-neutral;
   font-size: 2.8rem;
   color: $color-accent;
-
   a {
     @extend %link--colored;
   }
 }
 
 .footer__brand {
-  font-size: 20rem;
+  font-size: 12rem;
   font-weight: 500;
   font-family: $font-polysans-neutral;
-  letter-spacing: -7px;
+  letter-spacing: -5px;
   color: $color-accent;
   text-align: center;
-  margin-bottom: 80px;
 }
 
 .footer__copyright {
   font-size: 2.5rem;
+  a {
+    @extend %link--colored;
+  }
 }

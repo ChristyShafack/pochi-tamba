@@ -16,7 +16,6 @@ import Blog from 'pages/Blog'
 import Projects from 'pages/Projects'
 import Home from 'pages/Home'
 
-// import Navigation from 'components/Navigation'
 import Preloader from 'components/Preloader'
 
 class App {

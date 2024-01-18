@@ -1,17 +1,20 @@
 mixin footer
   section.footer
     .footer__content
+      .footer__brand
+        p
+          a(href='/home') Pochi Tamba
       .footer__navigation
         p
-          a(href='#') Home
+          a(href='/') Home
         p
-          a(href='#') Projects
+          a(href='/projects') Projects
         p
-          a(href='#') Blog
+          a(href='/blog') Blog
         p
-          a(href='#') About
+          a(href='/about') About
         p
-          a(href='#') Contact
+          a(href='/contact') Contact
       .footer__socials 
         p
           a(href='#') Facebook
@@ -21,17 +24,12 @@ mixin footer
           a(href='#') LinkedIn
         p
           a(href='#') Instagram
-
-      .footer__brand
-        p
-          a(href='/home') Pochi Tamba
-
       .footer__copyright
-          p
-            a(href='#') Terms
-          p
-            a(href='#') Privacy
-          p pochi-tamba ©2024
+            p
+              a(href='#') Terms
+            p
+              a(href='#') Privacy
+            p pochi-tamba ©2024
 
 block variables
 
