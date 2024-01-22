@@ -1,67 +1,131 @@
 .contact {
-    @extend %page;
-    word-break: break-all;
-  
-    &--active {
-      @extend %page--active;
-    }
-  }
-  
-  .contact__content {
-    @extend %cover;
-    @extend %content;
-    overflow: auto;
-  }
-  
-  .intro__contact {
-    @extend %sections;
-  }
-  
-  .intro__contact__content {
-    @extend %section__contents;
-  
-    h1 {
-      @extend %page-headings;
-    }
-  }
+  @extend %page;
+  word-break: break-all;
 
-  .contact__content__options{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 50px;
-    h2{
-      font-family: $font-polysans-neutral;
-      font-size: 10rem;
-      line-height: 1;
-      // letter-spacing: -5px;
-      span{
-        color: $color-accent;
-      }
+  &--active {
+    @extend %page--active;
+  }
+}
+
+.contact__content {
+  @extend %cover;
+  @extend %content;
+  overflow: auto;
+}
+
+.intro__contact {
+  @extend %sections;
+}
+
+.intro__contact__content {
+  @extend %section__contents;
+
+  h1 {
+    @extend %page-headings;
+  }
+}
+
+.contact__content__options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 50px;
+
+  h2 {
+    font-family: $font-polysans-neutral;
+    font-size: 10rem;
+    line-height: 1;
+
+    // letter-spacing: -5px;
+    span {
+      color: $color-accent;
     }
   }
-  .contact__option__email,
-  .contact__option__socials{
-    color: $color-accent;
-  }
+}
 
-  .contact__option__email{    
-    max-width: 600px;
-    font-size: 8rem;
+.contact__option__email,
+.contact__option__socials {
+  color: $color-accent;
+}
+
+.contact__option__email {
+  max-width: 600px;
+  font-size: 8rem;
+  @extend %link--colored;
+  margin: 50px 0 25px 0;
+}
+
+.contact__option__socials {
+  display: flex;
+  max-width: 500px;
+  justify-content: space-between;
+  font-size: 5rem;
+  // color: $color-accent;
+  margin: 25px 0 100px 0;
+
+  a {
     @extend %link--colored;
-    margin: 50px 0 25px 0;
   }
-  .contact__option__socials{
-    display: flex;
-    max-width: 500px;
-    justify-content: space-between;
-    font-size: 5rem;
-    // color: $color-accent;
-    margin: 25px 0 50px 0;
-    a{
-      @extend %link--colored;
-    }
-  }
-  .contact__option__form{
+}
 
+#contact-form ul {
+  list-style: none;
+  border-radius: 5px;
+  margin-bottom: 40px;
+}
+
+#contact-form li {
+  padding: 10px 0;
+  margin-bottom: 50px;
+}
+
+#contact-form li:last-of-type {
+  border-bottom: none;
+}
+
+#contact-form label {
+  display: block;
+  font-size: 4rem;
+  color: $color-black;
+  padding-left: 5px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  font-family: $font-polysans-neutral;
+  width: 100%;
+  padding: 5px;
+  border: none;
+  resize: vertical;
+  background: transparent;
+  color: $color-accent;
+  font-size: 4rem;
+}
+
+input:focus {
+  outline: none;
+  border: none;
+}
+
+textarea:focus {
+  outline: none;
+  border: none;
+}
+
+.textarea {
+  border-bottom: 2px solid $color-accent;
+}
+
+.send {
+ @extend %cta--colored;
+ color: $color-white;
+
+}
+
+
+@media(max-width: 768px) {
+  #contact-form {
+    margin: 5% -8%;
+    width: 98%;
   }
+}

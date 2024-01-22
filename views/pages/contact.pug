@@ -21,6 +21,28 @@ block body
                             a(href='#') Twitter
                             a(href='#') LinkedIn
                         .contact__option__form
+                            .container-fluid
+                                .row
+                                    .col-lg-8
+                                    form#contact-form(name='contact-form' method='post' action='')
+                                        ul
+                                            li(data-wow-delay='1.4s')
+                                                label(for='contact-name') Name :
+                                                .textarea
+                                                    input#contact-name(type='text' name='contact-name' value='' required='')
+                                            li(data-wow-delay='1.6s')
+                                                label(for='contact-email') Email :
+                                                .textarea
+                                                    input#contact-email(type='email' name='contact-email' value='' required='')
+                                            li(data-wow-delay='1.6s')
+                                                label(for='contact-project') Message :
+                                                .textarea
+                                                    textarea#contact-project(type='email' name='contact-project' rows='6' value='' required='')
+                                            .cta
+                                                .btn
+                                                    button#contact-submit.send(type='submit' name='contact-submit') Send Message
+
+
             +footer 
     
 

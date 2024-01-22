@@ -32,13 +32,15 @@
   @extend %section__contents;
 }
 
+
+
 .title,
 .quote {
-
   h2,
   p {
     font-family: $font-polysans-slim;
     font-size: 3rem;
+    margin-top: 100px;
   }
 }
 
