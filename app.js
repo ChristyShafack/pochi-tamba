@@ -20,6 +20,10 @@ app.get('/contact', (request, response) => {
   response.render('pages/contact')
 })
 
+app.get('/projects/portraits', (request, response) => {
+  response.render('projects/portraits')
+})
+
 app.use((request, response) => {
   response.status(404)
 

@@ -10,6 +10,10 @@ import each from 'lodash/each'
 
 import Detection from 'classes/Detection'
 
+// import Filming from 'pages/Project/Filming'
+// import Darkroom from 'pages/Project/Darkroom'
+// import Capture from 'pages/Project/Capture'
+import Portraits from 'pages/Portraits'
 import Contact from 'pages/Contact'
 import About from 'pages/About'
 import Blog from 'pages/Blog'
@@ -32,6 +36,7 @@ class App {
     // this.createPreloader()
     // this.createNavigation()
     this.pages = new Map()
+    this.pages.set('portraits', new Portraits())
     this.pages.set('contact', new Contact())
     this.pages.set('about', new About())
     this.pages.set('blog', new Blog())
@@ -291,14 +296,14 @@ class App {
   }
 }
 
-const fontNeueHaas = new FontFaceObserver('Polysans Neutral')
+const fontPolysansneutral = new FontFaceObserver('Polysans Neutral')
 
 Promise.all([
-  fontNeueHaas.load()
+  fontPolysansneutral.load()
 ]).then(_ => {
   window.APP = new App()
 }).catch(_ => {
   window.APP = new App()
 })
 
-console.log('%c Developed by Christy - https://christyshafack.com/', 'background: #000; color: #fff;')
+console.log('%c Developed by Christy - https://christyshafack.com/', 'color: #000;')

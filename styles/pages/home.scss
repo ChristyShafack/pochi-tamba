@@ -207,9 +207,6 @@
   font-family: $font-polysans-neutral;
   font-size: 2.8rem;
   color: $color-accent;
-  a {
-    @extend %link--colored;
-  }
 }
 
 .footer__brand {
