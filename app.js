@@ -13,6 +13,9 @@ app.get('/projects', (request, response) => {
 app.get('/blog', (request, response) => {
   response.render('pages/blog')
 })
+app.get('/clients', (request, response) => {
+  response.render('pages/clients')
+})
 app.get('/about', (request, response) => {
   response.render('pages/about')
 })
@@ -22,6 +25,18 @@ app.get('/contact', (request, response) => {
 
 app.get('/projects/portraits', (request, response) => {
   response.render('projects/portraits')
+})
+
+app.get('/projects/darkroom', (request, response) => {
+  response.render('projects/darkroom')
+})
+
+app.get('/projects/filming', (request, response) => {
+  response.render('projects/filming')
+})
+
+app.get('/projects/capture', (request, response) => {
+  response.render('projects/capture')
 })
 
 app.use((request, response) => {

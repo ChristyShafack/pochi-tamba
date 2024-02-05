@@ -66,8 +66,7 @@
 
 %project__img{
   width: 400px;
-  object-fit: cover;
-}
+  object-fit: cover;}
 
 %project__title{
   margin-top: 5px;
@@ -93,3 +92,7 @@
   }
 }
 
+
+%imageborder{
+  border-radius: 20px;
+}

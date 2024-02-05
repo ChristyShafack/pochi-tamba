@@ -1,0 +1,29 @@
+.blog {
+    @extend %page;
+    word-break: break-all;
+  
+    &--active {
+      @extend %page--active;
+    }
+  }
+  
+  .blog__content {
+    @extend %cover;
+    @extend %content;
+    overflow: auto;
+    background-color: $color-black;
+  }
+  
+  .intro__blog {
+    @extend %sections;
+  }
+  
+  .intro__blog__content {
+    @extend %section__contents;
+  
+    h1 {
+      @extend %page-headings;
+      color: $color-white;
+      margin-top: 50px;
+    }
+  }

@@ -25,6 +25,7 @@
   }
   img{
     @extend %heading__img;
+    @extend %imageborder;
   }
 }
 

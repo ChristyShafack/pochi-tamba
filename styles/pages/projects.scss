@@ -41,6 +41,9 @@
 .project__img {
     @extend %project__img;
 
+    img {
+        @extend %imageborder;
+    }
 }
 
 .project__title {
