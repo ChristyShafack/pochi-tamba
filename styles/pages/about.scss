@@ -23,6 +23,7 @@
   h1 {
     @extend %page-headings;
     line-height: 0.9;
+    margin-bottom: 100px;
   }
   img{
     @extend %heading__img;

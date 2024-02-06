@@ -1,4 +1,4 @@
-.blog {
+.blogs {
     @extend %page;
     word-break: break-all;
   
@@ -7,18 +7,18 @@
     }
   }
   
-  .blog__content {
+  .blogs__content {
     @extend %cover;
     @extend %content;
     overflow: auto;
     background-color: $color-black;
   }
   
-  .intro__blog {
+  .intro__blogs {
     @extend %sections;
   }
   
-  .intro__blog__content {
+  .intro__blogs__content {
     @extend %section__contents;
   
     h1 {
@@ -27,3 +27,32 @@
       margin-top: 50px;
     }
   }
+
+  .blogs__list__content {
+    @extend %section__contents;
+}
+
+.blogs__list {
+  @extend %projects;
+}
+
+.blog {
+  @extend %project;
+}
+
+.blog__img {
+  @extend %project__img;
+  img {
+      @extend %imageborder;
+  }
+}
+
+.blog__title {
+  @extend %project__title;
+  color: $color-white;
+}
+
+.blog__cta {
+  @extend %project__cta;
+  color: $color-white;
+}

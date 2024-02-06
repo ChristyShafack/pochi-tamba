@@ -1,12 +1,29 @@
 extends ../base.pug
 
 block variables
-    - var template = 'blog'
+    - var template = 'blogs'
 
 block body
-    .blog
-        .blog__content
-            section.intro__blog
-                .intro__blog__content
-                    h1 Blog posts
+    .blogs
+        .blogs__content
+            section.intro__blogs
+                .intro__blogs__content
+                    h1(data-animation="paragraph") Blog posts
+                    .blogs__list__content
+                        .blogs__list
+                            .blog
+                                .blog__img
+                                    img(src="/images/b1.jpg" alt="")
+                                .blog__title 
+                                    h2 What is your gift?
+                                .blog__cta
+                                    a(href='https://restoredwithpochi1.wordpress.com/2024/01/01/what-is-your-gift/') view blog
+
+                            .blog
+                                .blog__img
+                                    img(src="/images/b2.jpg" alt="")
+                                .blog__title 
+                                    h2 Understanding is an illusion 
+                                .blog__cta 
+                                    a(href='https://restoredwithpochi1.wordpress.com/2024/02/05/understanding-is-an-illusion/') view blog
             +footer 

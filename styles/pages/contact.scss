@@ -22,7 +22,7 @@
 
   h1 {
     @extend %page-headings;
-    line-height: 0.8;
+    line-height: 0.9;
   }
 }
 
@@ -31,11 +31,10 @@
   flex-direction: column;
   justify-content: space-between;
   margin-top: 50px;
-
   h2 {
     font-family: $font-polysans-neutral;
     font-size: 10rem;
-    line-height: 1;
+    line-height: 1.21;
 
     // letter-spacing: -5px;
     span {

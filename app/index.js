@@ -17,7 +17,7 @@ import Darkroom from 'pages/Darkroom'
 import Contact from 'pages/Contact'
 import About from 'pages/About'
 import Clients from 'pages/Clients'
-import Blog from 'pages/Blog'
+import Blogs from 'pages/Blogs'
 import Projects from 'pages/Projects'
 import Home from 'pages/Home'
 
@@ -41,7 +41,7 @@ class App {
     this.pages.set('contact', new Contact())
     this.pages.set('about', new About())
     this.pages.set('clients', new Clients())
-    this.pages.set('blog', new Blog())
+    this.pages.set('blogs', new Blogs())
     this.pages.set('projects', new Projects())
     this.pages.set('home', new Home())
 
