@@ -22,6 +22,7 @@
 
   h1 {
     @extend %page-headings;
+    line-height: 0.9;
   }
   img{
     @extend %heading__img;
@@ -50,7 +51,7 @@
   }
 
   p {
-    font-family: $font-polysans-neutral;
+    font-family: $font-polysans-slim;
     font-size: 3rem;
     color: $color-black;
      margin: 30px 0 0 0;
@@ -67,7 +68,7 @@
 
 
   p {
-    font-family: $font-polysans-neutral;
+    font-family: $font-polysans-slim;
     font-size: 3rem;
     color: $color-black;
     margin: 30px 0 0 0;

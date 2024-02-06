@@ -1,0 +1,87 @@
+extends ../base.pug
+
+block variables
+  - var template = 'darkroom'
+
+block body
+  .darkroom
+    .darkroom__content
+      .wrapper(data-scroll-container='')
+        .container
+          .site-content
+            section.project-hero(data-scroll-section='')
+              .project-header
+                .row
+                  h1 Filming
+      section.project-hero-img(data-scroll-section='')
+        img(src='/images/img-7.jpg' alt='')
+      .container
+        .site-content
+          section.project-description(data-scroll-section='')
+            .project-desc-col
+              h4 Roles
+              br
+              p
+              | Art Direction / rhythm Design 
+              br
+              | rhythmtrack / Video Direction 
+              br
+              | rhythm Strategy
+            .project-desc-col
+              p
+              | Immersed within a captivating audio installation housed within
+              br
+              | a collection of interconnected containers, each container served
+              br
+              | as a unique emotional space. As visitors ventured through these 
+              br
+              | distinct rooms, they were offered the opportunity to capture the 
+              br
+              | rhythm emanating from their own skin, ultimately contributing to 
+              br
+              | the creation of a one-of-a-kind rhythm track, an original compo-
+              br
+              | sition of their own making.
+      section.project-quote(data-scroll-section='')
+        .quote-icon(data-scroll='' data-scroll-direction='horizontal' data-scroll-speed='-3')
+          svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 100 90')
+            defs
+            g(fill='none' stroke='#e4e3db' stroke-width='.25')
+              path(d='M29 47.6c10.1 0 19.7 7.6 19.7 20.2C48.7 81.4 38.6 89 28 89 14.3 89 2.2 79.9 2.2 58.2c0-28.3 14.2-45.5 32.8-57.1l1.5 2C18.9 14.7 9.3 29.4 9.3 45c0 4.1 1 7.1 3 9.1C15.9 50.6 19.4 47.6 29 47.6zM78.1 47.5c10.1 0 19.7 7.6 19.7 20.2 0 13.6-10.1 21.2-20.7 21.2-13.6 0-25.8-9.1-25.8-30.8 0-28.3 14.1-45.5 32.8-57.1l1.5 2C68 14.7 58.4 29.3 58.4 45c0 4.1 1 7.1 3 9.1C64.9 50.5 68.5 47.5 78.1 47.5z')
+        .quote
+          h2
+            | The first rhythmtrack 
+            br
+            | composed by the skin
+            br
+            | rhythms.
+      section.project-slider(data-scroll-section='')
+        .carousel
+          .carousel--wrap
+            .carousel--item
+              figure
+                img(src='/images/img-1.png' alt='')
+            .carousel--item
+              figure
+                img(src='/images/img-2.png' alt='')
+            .carousel--item
+              figure
+                img(src='/images/img-3.png' alt='')
+            .carousel--item
+              figure
+                img(src='/images/img-4.png' alt='')
+            .carousel--item
+              figure
+                img(src='/images/img-5.png' alt='')
+            .carousel--item
+              figure
+                img(src='/images/img-6.png' alt='')
+            .carousel--item
+              figure
+                img(src='/images/img-7.jpg' alt='')
+      section.project__navigation__ctrls 
+        .project__cta__ctrl
+          a(href='/projects') back
+        .project__cta__ctrl
+          a(href='/projects/portraits') next project    
+      +footer 

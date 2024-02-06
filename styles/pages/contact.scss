@@ -22,6 +22,7 @@
 
   h1 {
     @extend %page-headings;
+    line-height: 0.8;
   }
 }
 
@@ -60,7 +61,6 @@
   max-width: 500px;
   justify-content: space-between;
   font-size: 5rem;
-  // color: $color-accent;
   margin: 25px 0 100px 0;
 
   a {

@@ -93,6 +93,16 @@
 }
 
 
+%project__project__cta__ctrl{
+  a {
+    @extend %project__project__cta;
+    font-size: 8rem;
+    font-family: $font-polysans-neutral;
+    @extend %link--colored;
+  }
+}
+
+
 %imageborder{
   border-radius: 20px;
 }
