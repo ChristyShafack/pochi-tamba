@@ -21,11 +21,13 @@
   .intro__blogs__content {
     @extend %section__contents;
   
-    h1 {
+    h1{
       @extend %page-headings;
       color: $color-white;
-      margin-top: 50px;
+      line-height: 0.9;
+      padding-top: 50px;
     }
+    
   }
 
   .blogs__list__content {

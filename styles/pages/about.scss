@@ -28,6 +28,7 @@
   img{
     @extend %heading__img;
     @extend %imageborder;
+
   }
 }
 
@@ -36,27 +37,37 @@
   flex-direction: column;
   justify-content: space-around;
   margin: 50px 0 0 0;
+
+  @include media("<phone") {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
 }
 
 .about__me,
 .about__background{
+  max-width: 85%;
+  word-break: keep-all;
   margin-bottom: 60px;
+  @include media("<phone") {
+    max-width: 100%;
+  }
 }
 
 
 .about__me {
-  h2 {
-    font-family: $font-polysans-slim;
-    font-size: 4rem;
-    color: $color-accent;
-  }
-
   p {
     font-family: $font-polysans-slim;
     font-size: 3rem;
     color: $color-black;
-     margin: 30px 0 0 0;
+    margin: 30px 0 0 0;
+
+     @include media("<phone") {
+      font-size: 1.5rem;
+    }
   }
+
 }
 
 .about__background {
@@ -65,6 +76,10 @@
     font-family: $font-polysans-slim;
     font-size: 4rem;
     color: $color-accent;
+
+    @include media("<phone") {
+      font-size: 2rem;
+    }
   }
 
 
@@ -73,5 +88,8 @@
     font-size: 3rem;
     color: $color-black;
     margin: 30px 0 0 0;
+    @include media("<phone") {
+      font-size: 1.5rem;
+    }
   }
 }

@@ -12,5 +12,12 @@
   font-family: $font-polysans-neutral;
   font-size: 33rem;
   color: $color-accent;
-  letter-spacing: -8px;
+  letter-spacing: -5px;
+
+  @include media("<phone") {
+    font-size: 8rem;
+    letter-spacing: -3px;
+    margin: 0 auto;
+  }
+
 }

@@ -31,14 +31,14 @@
   flex-direction: column;
   justify-content: space-between;
   margin-top: 50px;
+
   h2 {
     font-family: $font-polysans-neutral;
     font-size: 10rem;
     line-height: 1.21;
 
-    // letter-spacing: -5px;
-    span {
-      color: $color-accent;
+    @include media("<phone") {
+      font-size: 3rem;
     }
   }
 }
@@ -53,6 +53,11 @@
   font-size: 8rem;
   @extend %link--colored;
   margin: 50px 0 25px 0;
+
+  @include media("<phone") {
+    font-size: 2rem;
+    max-width: 400px;
+  }
 }
 
 .contact__option__socials {
@@ -62,20 +67,38 @@
   font-size: 5rem;
   margin: 25px 0 100px 0;
 
+  @include media("<phone") {
+    font-size: 2rem;
+    max-width: 400px;
+  }
+
   a {
     @extend %link--colored;
   }
 }
 
+form {
+  @include media("<phone") {
+    width: 80%;
+  }
+}
+
 #contact-form ul {
   list-style: none;
-  border-radius: 5px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+
+  @include media("<phone") {
+    font-size: 3rem;
+  }
 }
 
 #contact-form li {
   padding: 10px 0;
   margin-bottom: 50px;
+
+  @include media("<phone") {
+    padding: 5px 0;
+  }
 }
 
 #contact-form li:last-of-type {
@@ -87,6 +110,11 @@
   font-size: 4rem;
   color: $color-black;
   padding-left: 5px;
+
+  @include media("<phone") {
+    font-size: 2rem;
+  }
+
 }
 
 #contact-form input,
@@ -99,6 +127,12 @@
   background: transparent;
   color: $color-accent;
   font-size: 4rem;
+
+  @include media("<phone") {
+    width: 50%;
+    font-size: 2rem;
+  }
+
 }
 
 input:focus {
@@ -116,15 +150,6 @@ textarea:focus {
 }
 
 .send {
- @extend %cta--colored;
- color: $color-white;
-
-}
-
-
-@media(max-width: 768px) {
-  #contact-form {
-    margin: 5% -8%;
-    width: 98%;
-  }
+  @extend %cta--colored;
+  color: $color-white;
 }

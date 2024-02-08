@@ -10,8 +10,8 @@ app.get('/', (request, response) => {
 app.get('/projects', (request, response) => {
   response.render('pages/projects')
 })
-app.get('/blog', (request, response) => {
-  response.render('pages/blog')
+app.get('/blogs', (request, response) => {
+  response.render('pages/blogs')
 })
 app.get('/clients', (request, response) => {
   response.render('pages/clients')

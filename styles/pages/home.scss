@@ -36,20 +36,30 @@
 
 .title,
 .quote {
-
   h2,
   p {
     font-family: $font-polysans-slim;
     font-size: 3rem;
     margin-top: 100px;
+    @include media("<phone") {
+      text-align: center;
+      font-size: 2rem;
+      margin: 20px 0;
+    }
+    
   }
 }
 
 .name__content {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
+  
+  @include media("<phone") {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 .name {
@@ -74,6 +84,9 @@
     font-size: 5rem;
     font-weight: 100;
     text-align: center;
+    @include media("<phone") {
+      font-size: 1.5rem;
+    }
   }
 }
 
@@ -109,14 +122,17 @@
 
 .intro__work__project {
   @extend %project;
+  @include media("<phone") {
+    margin: 50px auto;
+  }
 
   .intro__work__project__img {
     @extend %project__img;
 
-    img{
+    img {
       @extend %imageborder;
     }
-    
+
   }
 
   .intro__work__project__title {
@@ -145,33 +161,55 @@
 
 .intro__review__client {
   width: 100px;
-  img{
+
+  img {
     object-fit: cover;
     @extend %imageborder;
   }
 }
 
-.intro__review__detail {
-  display: flex;
-  flex-direction: column;
-  align-content: flex-start;
-  align-items: flex-start;
-  max-width: 800px;
-}
+// .intro__review__detail {
+//   display: flex;
+//   flex-direction: column;
+//   align-content: flex-start;
+//   align-items: flex-start;
+//   word-break: keep-all;
+// }
 
-.intro__reviews__client__name {
-  font-family: $font-polysans-neutral;
-  font-size: 4rem;
-  line-height: 1.5;
-}
+// .intro__reviews__client__name {
+//   font-family: $font-polysans-neutral;
+//   font-size: 4rem;
+//   line-height: 1.5;
+
+//   @include media("<phone") {
+//     font-size: 2rem;
+//   }
+// }
 
 
-.intro__review__text {
-  p {
-    font-size: 2.5rem;
-  }
+// .intro__review__text {
+//   display: flex;
+//   flex-direction: column;
+//   margin-top: 20px;
+//   font-size: 3rem;
+//   max-width: 900px;
 
-}
+//   p {
+//     margin-bottom: 20px;
+//   }
+
+//   @include media("<phone") {
+//     font-size: 1.5rem;
+//     word-break: keep-all;
+//   }
+//   // p {
+//   //   font-size: 2.5rem;
+//   //   @include media("<phone") {
+//   //     font-size: 1rem;
+//   //   }
+//   // }
+
+// }
 
 .intro__connect .intro__connect__content {
   background-color: $color-accent;
@@ -212,6 +250,11 @@
   flex-direction: row;
   justify-content: space-evenly;
   padding: 100px 0;
+
+  @include media("<phone") {
+    flex-direction: column;
+    margin: 0 auto;
+  }
 }
 
 .footer__navigation,
@@ -221,6 +264,11 @@
   flex-direction: column;
   justify-content: space-evenly;
   text-align: left;
+
+  @include media("<phone") {
+    text-align: center;
+    margin: 25px auto;
+  }
 }
 
 .footer__navigation {
@@ -229,12 +277,20 @@
   a {
     @extend %link--colored;
   }
+
+  @include media("<phone") {
+    font-size: 1.5rem;
+  }
 }
 
 .footer__socials {
   font-family: $font-polysans-neutral;
   font-size: 2.8rem;
   color: $color-accent;
+
+  @include media("<phone") {
+    font-size: 1.4rem;
+  }
 }
 
 .footer__brand {
@@ -244,6 +300,10 @@
   letter-spacing: -5px;
   color: $color-accent;
   text-align: center;
+
+  @include media("<phone") {
+    font-size: 4rem;
+  }
 }
 
 .footer__copyright {
@@ -251,5 +311,9 @@
 
   a {
     @extend %link--colored;
+  }
+
+  @include media("<phone") {
+    font-size: 1.25rem;
   }
 }

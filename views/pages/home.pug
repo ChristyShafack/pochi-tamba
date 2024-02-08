@@ -10,8 +10,6 @@ block body
         .intro__content
           .title(data-animation="paragraph")
             h2 Life / Leadership Coach
-          br
-          br
           .name__content
             .name(data-animation="paragraph")
               h1 Pochi 
@@ -19,6 +17,7 @@ block body
                 | Tamba
             .quote(data-animation="paragraph")
               p Pochi means "the charity of God"
+          br
           .image
             img(src='/images/pochi.jpg' alt='pochi')
           .writeup(data-animation="paragraph")
@@ -54,7 +53,7 @@ block body
             .intro__work__project
               .intro__work__project__img
                 img(src="/images/project2.jpg" alt="")
-              .intro__work__project__title(data-animation="paragraph") 
+              .intro__work__project__title
                 h2 portraits
               .intro__work__project__cta 
                 a(href='/projects/portraits') view project
@@ -62,7 +61,7 @@ block body
             .intro__work__project
               .intro__work__project__img
                 img(src="/images/project1.jpg" alt="")
-              .intro__work__project__title(data-animation="paragraph") 
+              .intro__work__project__title
                 h2 filming
               .intro__work__project__cta
                 a(href='/projects/filming') view project
@@ -70,7 +69,7 @@ block body
             .intro__work__project
               .intro__work__project__img
                 img(src="/images/project2.jpg" alt="")
-              .intro__work__project__title(data-animation="paragraph") 
+              .intro__work__project__title
                 h2 capture
               .intro__work__project__cta 
                 a(href='/projects/capture') view project
@@ -86,34 +85,31 @@ block body
             h2 Client reviews
 
           .intro__reviews
-            .intro__review
-              .intro__review__client
-                img(src="/images/r1.png" alt="")
-              .intro__review__detail
-                .intro__reviews__client__name(data-animation="paragraph") Hodna Nuernberg 
-                .intro__review__text(data-animation="paragraph") 
-                  p My students were highly engaged during Pochi’s workshops, and the information she shared allowed my students
-                    br
-                    |  to work collaboratively with minimal adult supervision. It was such fun to see the students wholeheartedly...
-
-            .intro__review
+            .intro__client__review
               .intro__review__client 
-                img(src="/images/r3.png" alt="")
-              .intro__review__detail
-                .intro__reviews__client__name(data-animation="paragraph") Georgette Arrey Taku 
-                .intro__review__text(data-animation="paragraph") 
-                  p Pochi is so passionate and committed in helping communities, amplifying the voices of the vulnerable, giving them
-                    br
-                    | the chance to tell their untold stories.  will recommend her again and will work with her anytime the opportunity
-                    br
-                    | comes up again.
-            .intro__review
+                img(src="/images/r1.png" alt="")
+              .intro__review__content__details
+                .intro__reviews__client__details Hodna Nuernberg 
+                .intro__review__text__details
+                  p My students were highly engaged during Pochi’s workshops, and the information she shared allowed my students to work collaboratively with minimal adult supervision. It was such fun to see the students wholeheartedly...
+
+            .intro__client__review
+              .intro__review__client 
+                img(src="/images/r2.png" alt="")
+              .intro__review__content__details
+                .intro__reviews__client__details Georgette Arrey Taku 
+                .intro__review__text__details
+                  p Pochi is so passionate and committed in helping communities, amplifying the voices of the vulnerable, giving them the chance to tell their untold stories.  will recommend her again and will work with her anytime the opportunity comes up again.
+
+            .intro__client__review
               .intro__review__client 
                 img(src="/images/r4.png" alt="")
-              .intro__review__detail
-                .intro__reviews__client__name(data-animation="paragraph") Anastassia White 
-                .intro__review__text(data-animation="paragraph") 
-                  p Our students enjoyed the interactive session Pochi facilitated and were left energized to continue their peacebuild 
+              .intro__review__content__details
+                .intro__reviews__client__details Anastassia White 
+                .intro__review__text__details
+                  p Our students enjoyed the interactive session Pochi facilitated and were left energized to continue their peacebuilding practice!
+
+
           .cta
             .btn
               a(href='/reviews')

@@ -32,34 +32,47 @@
   flex-direction: column;
   justify-content: space-between;
   align-content: space-between;
-  margin: 0;
+  margin: 50px 0;
   border-bottom: 1px solid $color-black;
-  padding: 25px 0 ;
+  padding: 25px 0;
 
-  img{
+  img {
     @extend %imageborder;
   }
 }
 
 
-.intro__reviews__client__details{
+.intro__reviews__client__details {
   font-family: $font-polysans-neutral;
   font-size: 4rem;
   line-height: 1.5;
   margin-top: 20px;
-  span{
-    color:$color-accent;
+
+  span {
+    color: $color-accent;
+  }
+
+  @include media("<phone") {
+    font-size: 1.8rem;
+    word-break: keep-all;
   }
 }
 
-.intro__review__text__details{
+.intro__review__text__details {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
-  font-size: 2.5rem;
+  font-size: 3rem;
   max-width: 900px;
-  p{
+  word-break: keep-all;
+
+  p {
     margin-bottom: 20px;
   }
-} 
+
+  @include media("<phone") {
+    font-size: 1.5rem;
+   
+  }
+}
 
