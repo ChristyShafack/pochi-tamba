@@ -1,4 +1,4 @@
-.clients {
+.reviews {
   @extend %page;
   word-break: break-all;
 
@@ -7,7 +7,7 @@
   }
 }
 
-.clients__content {
+.reviews__content {
   @extend %cover;
   @extend %content;
   overflow: auto;

@@ -15,7 +15,7 @@
 
 .intro,
 .work,
-.reviews,
+.review,
 .connect,
 .footer {
   @extend %sections;
@@ -168,49 +168,6 @@
   }
 }
 
-// .intro__review__detail {
-//   display: flex;
-//   flex-direction: column;
-//   align-content: flex-start;
-//   align-items: flex-start;
-//   word-break: keep-all;
-// }
-
-// .intro__reviews__client__name {
-//   font-family: $font-polysans-neutral;
-//   font-size: 4rem;
-//   line-height: 1.5;
-
-//   @include media("<phone") {
-//     font-size: 2rem;
-//   }
-// }
-
-
-// .intro__review__text {
-//   display: flex;
-//   flex-direction: column;
-//   margin-top: 20px;
-//   font-size: 3rem;
-//   max-width: 900px;
-
-//   p {
-//     margin-bottom: 20px;
-//   }
-
-//   @include media("<phone") {
-//     font-size: 1.5rem;
-//     word-break: keep-all;
-//   }
-//   // p {
-//   //   font-size: 2.5rem;
-//   //   @include media("<phone") {
-//   //     font-size: 1rem;
-//   //   }
-//   // }
-
-// }
-
 .intro__connect .intro__connect__content {
   background-color: $color-accent;
   color: $color-white;
@@ -233,6 +190,9 @@
     font-weight: 100;
     text-align: center;
     color: $color-white;
+    @include media("<phone") {
+      font-size: 2rem;
+    }
   }
 
   .btn {

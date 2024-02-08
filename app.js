@@ -13,8 +13,8 @@ app.get('/projects', (request, response) => {
 app.get('/blogs', (request, response) => {
   response.render('pages/blogs')
 })
-app.get('/clients', (request, response) => {
-  response.render('pages/clients')
+app.get('/reviews', (request, response) => {
+  response.render('pages/reviews')
 })
 app.get('/about', (request, response) => {
   response.render('pages/about')
