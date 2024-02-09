@@ -122,7 +122,7 @@
     @extend %link--colored;
 
     @include media("<phone") {
-      font-size: 4rem;
+      font-size: 2rem;
     }
   }
 }
