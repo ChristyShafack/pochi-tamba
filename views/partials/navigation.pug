@@ -1,24 +1,86 @@
-nav.navbar
-  .container
-    .navbar-logo
-      a(href='/') Pochi Tamba
-    .navbar-items
-      input#hamburger-toggle(type='checkbox')
-      label.hamburger-icon(for='hamburger-toggle')
-        i.ph-light.ph-list
-      ul.navbar-links
-        li.navbar-item
-          a(href='/') Home
-        li.navbar-item
-          a(href='/projects') Projects
-        li.navbar-item
-          a(href='/blogs') Blogs
-        li.navbar-item 
-          a(href='/reviews') Reviews
-        li.navbar-item
-          a(href='/about') About
-        li.navbar-item
-          a(href='/contact') Contact
-script(src="https://unpkg.com/@phosphor-icons/web")
+nav.navigation
+  .logo
+    a(href="/") Pochi Tamba
+
+  ul#menu
+    li
+      a(href='/') Home
+    li
+      a(href='/projects') Projects
+    li
+      a(href='/reviews') Reviews
+    li
+      a(href='/blogs') Blog
+    li
+      a(href='/about') About
+    li
+      a(href='/contact') Contact
+
+  header.cd-header
+    .header-wrapper
+      .nav-but-wrap
+        .menu-icon.hover-target
+          span.menu-icon__line.menu-icon__line-left
+          span.menu-icon__line
+          span.menu-icon__line.menu-icon__line-right
+  .nav
+    .nav__content
+      ul.nav__list
+        li.nav__list-item.active-nav
+          a.hover-target(href='/') Home
+        li.nav__list-item
+          a.hover-target(href='/projects') Projects
+        li.nav__list-item
+          a.hover-target(href='/reviews') Reviews
+        li.nav__list-item
+          a.hover-target(href='/blogs') Blog
+        li.nav__list-item
+          a.hover-target(href='/about')  About
+        li.nav__list-item
+          a.hover-target(href='/contact')  Contact 
+
+script(type="text/javascript").
+  var app = function () {
+  var body = undefined;
+  var menu = undefined;
+  var menuItems = undefined;
+  var init = function init() {
+    body = document.querySelector('body');
+    menu = document.querySelector('.menu-icon');
+    menuItems = document.querySelectorAll('.nav__list-item');
+    applyListeners();
+  };
+  var applyListeners = function applyListeners() {
+    menu.addEventListener('click', function () {
+      return toggleClass(body, 'nav-active');
+    });
+  };
+  var toggleClass = function toggleClass(element, stringClass) {
+    if (element.classList.contains(stringClass)) element.classList.remove(stringClass);else element.classList.add(stringClass);
+  };
+  init();
+  }();
 
 
+//- nav.navbar
+//-   .container
+//-     .navbar-logo
+//-       a(href='/') Pochi Tamba
+//-     .navbar-items
+//-       input#hamburger-toggle(type='checkbox')
+//-       label.hamburger-icon(for='hamburger-toggle')
+//-         i.ph-light.ph-list
+//-       ul.navbar-links
+//-         li.navbar-item
+//-           a(href='/') Home
+//-         li.navbar-item
+//-           a(href='/projects') Projects
+//-         li.navbar-item
+//-           a(href='/blogs') Blogs
+//-         li.navbar-item 
+//-           a(href='/reviews') Reviews
+//-         li.navbar-item
+//-           a(href='/about') About
+//-         li.navbar-item
+//-           a(href='/contact') Contact
+//- script(src="https://unpkg.com/@phosphor-icons/web")
