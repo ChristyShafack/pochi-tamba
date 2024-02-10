@@ -27,11 +27,11 @@ mixin footer
         p
           a(href='#') Instagram
       .footer__copyright
-            p
-              a(href='#') Terms
-            p
-              a(href='#') Privacy
-            p pochi-tamba ©2024
+        p
+          a(href='#') Terms
+        p
+          a(href='#') Privacy
+        p pochi-tamba ©2024
 
 block variables
 
@@ -76,12 +76,12 @@ if !isAJAX
         include ../public/main.css
 
     body
-      //- include ./partials/preloader
+      include ./partials/preloader
       include ./partials/navigation
       .content#content(data-template=template)
         block body
       include ./partials/noscript
-       
+
 
       script(async src=getVersionedPath('/main.js'))
 else
