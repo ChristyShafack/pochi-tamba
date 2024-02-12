@@ -17,6 +17,10 @@
 	position: relative;
 	height: 50vh;
 
+	@include media("<phone") {
+		font-size: 25vh;
+	}
+
 	.project-header {
 		position: absolute;
 		top: 40%;
@@ -34,6 +38,10 @@
 				font-size: 20vw;
 			}
 
+		}
+
+		@include media("<phone") {
+			top: 25%;
 		}
 
 		.row {

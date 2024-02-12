@@ -34,7 +34,7 @@ class App {
     this.content = document.querySelector('.content')
     this.template = this.content.dataset.template
 
-    // this.createPreloader()
+    this.createPreloader()
     this.pages = new Map()
     this.pages.set('darkroom', new Darkroom())
     this.pages.set('contact', new Contact())

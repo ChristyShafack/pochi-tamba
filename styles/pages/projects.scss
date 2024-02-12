@@ -36,6 +36,10 @@
 
 .project {
     @extend %project;
+
+    @include media("<phone") {
+        margin: 50px auto;
+    }
 }
 
 .project__img {
@@ -43,6 +47,11 @@
 
     img {
         @extend %imageborder;
+
+        @include media("<phone") {
+            width: 350px;
+
+        }
     }
 }
 
