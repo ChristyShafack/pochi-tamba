@@ -27,7 +27,7 @@
   will-change: transform;
 }
 
-%heading__img{
+%heading__img {
   width: 70%;
   object-fit: cover;
   margin: 0 auto;
@@ -36,15 +36,15 @@
   @include media("<phone") {
     width: 90%;
   }
-  
+
 }
 
-%sections{
+%sections {
   width: 100%;
   text-align: left;
 }
 
-%section__contents{
+%section__contents {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
@@ -55,11 +55,12 @@
 
   @include media("<phone") {
     margin: 0 auto;
-    width: 95%;  }
+    width: 92%;
+  }
 
 }
 
-%projects{
+%projects {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -67,28 +68,40 @@
   align-content: space-between;
 }
 
-%project{
+%project {
   display: flex;
   flex-direction: column;
   margin-bottom: 100px;
 }
 
-%project__img{
-  width: 400px;
-  object-fit: cover;}
+%project__img {
 
-%project__title{
+  img {
+    width: 400px;
+    object-fit: cover;
+
+    @include media("<phone") {
+      width: 210px;
+    }
+  }
+
+
+}
+
+%project__title {
   margin-top: 5px;
+
   h2 {
     font-family: $font-polysans-slim;
     font-size: 6rem;
+
     @include media("<phone") {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
   }
 }
 
-%project__cta{
+%project__cta {
   a {
     font-family: $font-polysans-slim;
     font-size: 3.5rem;
@@ -101,7 +114,7 @@
 }
 
 
-%project__project__cta{
+%project__project__cta {
   a {
     font-family: $font-polysans-slim;
     font-size: 3rem;
@@ -114,7 +127,7 @@
 }
 
 
-%project__project__cta__ctrl{
+%project__project__cta__ctrl {
   a {
     @extend %project__project__cta;
     font-size: 8rem;
@@ -128,6 +141,6 @@
 }
 
 
-%imageborder{
+%imageborder {
   border-radius: 20px;
 }

@@ -1,37 +1,37 @@
 .blogs {
-    @extend %page;
-    word-break: break-all;
-  
-    &--active {
-      @extend %page--active;
-    }
+  @extend %page;
+  word-break: break-all;
+
+  &--active {
+    @extend %page--active;
   }
-  
-  .blogs__content {
-    @extend %cover;
-    @extend %content;
-    overflow: auto;
-    background-color: $color-black;
-  }
-  
-  .intro__blogs {
-    @extend %sections;
-  }
-  
-  .intro__blogs__content {
-    @extend %section__contents;
-  
-    h1{
-      @extend %page-headings;
-      color: $color-white;
-      line-height: 0.9;
-      padding-top: 50px;
-    }
-    
+}
+
+.blogs__content {
+  @extend %cover;
+  @extend %content;
+  overflow: auto;
+  background-color: $color-black;
+}
+
+.intro__blogs {
+  @extend %sections;
+}
+
+.intro__blogs__content {
+  @extend %section__contents;
+
+  h1 {
+    @extend %page-headings;
+    color: $color-white;
+    line-height: 0.9;
+    padding-top: 50px;
   }
 
-  .blogs__list__content {
-    @extend %section__contents;
+}
+
+.blogs__list__content {
+  @extend %section__contents;
 }
 
 .blogs__list {
@@ -40,12 +40,24 @@
 
 .blog {
   @extend %project;
+
+  @include media("<phone") {
+    margin: 50px auto;
+
+  }
+
 }
 
 .blog__img {
   @extend %project__img;
+
   img {
-      @extend %imageborder;
+    @extend %imageborder;
+
+    @include media("<phone") {
+      width: 350px;
+
+    }
   }
 }
 
