@@ -31,7 +31,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-content: space-between;
-  margin: 50px 0;
+  // margin: 50px 0;
   border-bottom: 1px solid $color-black;
   padding: 25px 0;
 
@@ -46,7 +46,7 @@
   font-family: $font-polysans-neutral;
   font-size: 4rem;
   line-height: 1.5;
-  margin-top: 20px;
+  margin-top: 10px;
 
   span {
     color: $color-accent;
@@ -68,6 +68,7 @@
 
   p {
     word-break: keep-all;
+    text-align: justify;
     margin-bottom: 20px;
   }
 

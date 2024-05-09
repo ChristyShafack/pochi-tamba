@@ -32,15 +32,34 @@
   @extend %section__contents;
 }
 
+.title{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  align-items: center;
+  gap: 3rem;
+  margin: 5rem 0;
+
+  @include media("<phone") {
+    flex-direction: column;
+    text-align: center;
+    margin: 1rem 0;
+    gap: 1.5rem;
+  }
+
+}
 
 
-.title,
-.quote {
+.title{
   h2,
   p {
+
+    word-break: keep-all;
+    text-align: justify;
     font-family: $font-polysans-slim;
     font-size: 3rem;
-    margin-top: 100px;
+  
     @include media("<phone") {
       text-align: center;
       font-size: 2rem;
@@ -48,24 +67,21 @@
     }
     
   }
-}
 
-.name__content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  
-  @include media("<phone") {
-    flex-direction: column;
-    text-align: center;
+  h1{
+
+    font-family: $font-polysans-neutral;
+    font-size: 27rem;
+    color: $color-accent;
+    letter-spacing: -5px;
+
+    @include media("<phone") {
+      font-size: 6.2rem;
+    }
   }
 }
 
-.name {
-  @extend %page-headings;
-  line-height: 0.9;
-}
+
 
 .image {
   @extend %heading__img;
@@ -80,14 +96,22 @@
   margin: 0 auto;
 
   p {
+  
     margin-top: 100px;
     font-size: 5rem;
     font-weight: 100;
     text-align: center;
+
+    word-break: keep-all;
+    text-align: justify;
+
+
     @include media("<phone") {
       font-size: 1.5rem;
     }
+
   }
+
 }
 
 .cta {
@@ -154,15 +178,13 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-top: 100px;
 }
 
 .intro__review {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 50px;
-
+  // margin-bottom: 25px;
 }
 
 .intro__review__client {
